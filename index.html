@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js animation api</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 3rem;
+        }
+
+        .box.green {
+            background-color: green;
+        }
+
+        .box.red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation api</h1>
+    <h2>Basic <code>element.animate()</code></h2>
+    <div class="box red js-basic"></div>
+
+    <h2>Animation <code>animation.pause()</code> and <code>animation.play()</code></h2>
+    <div style="margin-bottom: 1rem;">
+        <button type="button" class="js-pause-btn">Pause animation</button>
+        <button type="button" class="js-play-btn">Play animation</button>
+    </div>
+    <div class="box red js-pause-play"></div>
+
+    <h2>Animations with promises</h2>
+    <p>In this example the second box runs after the first one is completed.</p>
+    <div style="margin-bottom: 1rem;"><button type="buttton" class="js-promises-run">Run this code</button></div>
+    <div class="box red js-promises-1"></div>
+    <div class="box red js-promises-2"></div>
+
+    <h2>Animations events</h2>
+    <p>This code shows the alert window on every event</p>
+    <h3><code>onfinish</code></h3>
+    <div style="margin-bottom: 16px;"><button type="button" class="js-events-finish-run">Run this code</button></div>
+    <div class="box red js-events-finish"></div>
+
+    <h3><code>oncancel</code></h3>
+    <div style="margin-bottom: 16px;"><button type="button" class="js-events-cancel-run">Cancel animation</button></div>
+    <div class="box red js-events-cancel"></div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
